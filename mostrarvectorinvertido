@@ -1,0 +1,44 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+
+void cargar(int vec[],int n){
+	int i;
+	for(i=0;i<n;i++){
+		cout<<"introducir elemento vec["<<i<<"]:";
+		cin>> vec[i];
+
+	}
+}
+
+void mostrar (int vec[],int n){
+	int i;
+	cout <<"el vector es .....>>>>:\n\n";
+	for(i=0;i<n;i++){
+		cout<<vec[i];
+	}
+}
+
+void invertirvector(int vec[],int n){
+	int i,aux;
+		for(i=0;i<n/2;i++){
+			aux=vec[i];
+			vec[i]=vec[n-1-i];
+			vec[n-1-i]=aux;
+		}
+}
+void main(){
+	int n,vec[20];
+cout<<"tamaño del vector\n";
+cin>> n;
+
+cargar(vec, n);
+mostrar(vec,n);
+invertirvector(vec,n);
+mostrar(vec,n);
+
+
+getch();
+}
